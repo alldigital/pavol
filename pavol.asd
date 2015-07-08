@@ -1,4 +1,4 @@
-(in-package :asdf-user)
+(in-package :asdf)
 
 (defsystem "pavol"
   :description "Simple StumpWM module to interact with pulseaudio."
