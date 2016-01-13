@@ -225,7 +225,7 @@ This is a heuristic."
 
 (defmethod volume ((sink sink))
   (ppcre:register-groups-bind ((#'parse-integer volume))
-      ("(?m:^\\s+volume: +\\d+: +(\\d+)%)" (sink->raw sink))
+      ("(?m:^\\s+volume: +(?:front-left: +)\\d+[:/\\s]+(\\d+)%)" (sink->raw sink))
     (if (null volume)
         (error "sink malformed")
       volume)))
